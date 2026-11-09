@@ -11,14 +11,14 @@ tags:
 - audio-language-model
 ---
 
-# Awaken Full Duplex
+# Awaken Full Duplex — Based on FunAudioChat
 
 <div align="center">
 
 **Awaken: An Efficient Training Recipe for Full-Duplex Conversation That Retains Model Ability**
 
-[![Blog](https://img.shields.io/badge/Blog-Project%20Page-orange)](https://github.com/avera-labs/AwakenFullDuplex/blob/main/webpage/index.html)
-[![GitHub](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/avera-labs/AwakenFullDuplex)
+[![Blog](https://img.shields.io/badge/Blog-Project%20Page-orange)](https://avera-labs.github.io/AwakenFullDuplex-FunAudioChat/)
+[![GitHub](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Model-yellow)](https://huggingface.co/openmartdev/awaken-full-duplex)
 [![Base model](https://img.shields.io/badge/Base-Fun--Audio--Chat--8B-green)](https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B)
 
@@ -29,8 +29,10 @@ tags:
 Full-duplex voice models can listen and speak at the same time, so they can acknowledge,
 interrupt, and hand over turns the way people do. Teaching this usually depends on natural
 conversational audio rich in backchannels. That audio is scarce, and without careful curation
-it can weaken a model's reasoning and grounding. **Awaken** learns full-duplex behavior from a
-small amount of such data and keeps its base model's scores.
+it can weaken a model's reasoning and grounding. **Awaken is based on
+[FunAudioChat](https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B)**, adapting the half-duplex
+model for full-duplex conversation using only a small amount of dialogue data while retaining
+most of the base model's benchmark performance.
 
 <p align="center">
   <img width="95%" src="assets/results.png" alt="Awaken evaluation results: backchannels, groundedness, spoken logic puzzles, and spoken question answering">
@@ -64,7 +66,7 @@ small amount of such data and keeps its base model's scores.
    on 100,132 records with replay of the interaction data.
 3. **GRPO**: improves backchannel timing from the model's own samples in conversational windows.
 
-See the [project page](https://github.com/avera-labs/AwakenFullDuplex/blob/main/webpage/index.html) for the full data composition and training details.
+See the [project page](https://avera-labs.github.io/AwakenFullDuplex-FunAudioChat/) for the full data composition and training details.
 
 ## Model Details
 
@@ -89,8 +91,8 @@ See the [project page](https://github.com/avera-labs/AwakenFullDuplex/blob/main/
 ## Installation
 
 ```bash
-git clone https://github.com/avera-labs/AwakenFullDuplex
-cd AwakenFullDuplex
+git clone https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat
+cd AwakenFullDuplex-FunAudioChat
 
 # 1. torch + torchaudio for YOUR CUDA driver first (the default PyPI wheel targets the newest
 #    CUDA and will not load on older drivers), e.g. for CUDA 12.8:
@@ -184,7 +186,7 @@ InteractionBench results and the Fun-Audio-Chat technical report.
 | **Awaken GRPO** | **75.6** |
 
 Because our runs and the published results are scored differently, compare across systems with
-care. Full methodology is on the [project page](https://github.com/avera-labs/AwakenFullDuplex/blob/main/webpage/index.html).
+care. Full methodology is on the [project page](https://avera-labs.github.io/AwakenFullDuplex-FunAudioChat/).
 
 ## Inference Details
 
@@ -242,14 +244,14 @@ awaken_chat/
 scripts/                ws_client.py, a paced WebSocket client that drives the server from a wav file
 tests/                  CPU unit tests on tiny random models
 hf_model_card/          Hugging Face model card (README + figures)
-webpage/                project page
+index.html              project page
 ```
 
 </details>
 
 ## License
 
-The code and model weights are licensed under the [Apache 2.0 License](https://github.com/avera-labs/AwakenFullDuplex/blob/main/LICENSE), the same license
+The code and model weights are licensed under the [Apache 2.0 License](https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat/blob/main/LICENSE), the same license
 as the base model [Fun-Audio-Chat-8B](https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B).
 
 ## Acknowledgments
@@ -257,9 +259,9 @@ as the base model [Fun-Audio-Chat-8B](https://huggingface.co/FunAudioLLM/Fun-Aud
 The model architecture is derived from [Fun-Audio-Chat](https://github.com/FunAudioLLM/Fun-Audio-Chat)
 and the speech codec from [CosyVoice](https://github.com/FunAudioLLM/CosyVoice) (both Apache-2.0);
 the text backbone is [Qwen3](https://github.com/QwenLM/Qwen3), and the ear follows
-[Whisper](https://github.com/openai/whisper)'s encoder. See [`NOTICE`](https://github.com/avera-labs/AwakenFullDuplex/blob/main/NOTICE).
+[Whisper](https://github.com/openai/whisper)'s encoder. See [`NOTICE`](https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat/blob/main/NOTICE).
 
 ## Contact
 
-- 🐛 Submit an [Issue](https://github.com/avera-labs/AwakenFullDuplex/issues)
-- 💡 Submit a [Pull Request](https://github.com/avera-labs/AwakenFullDuplex/pulls)
+- 🐛 Submit an [Issue](https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat/issues)
+- 💡 Submit a [Pull Request](https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat/pulls)

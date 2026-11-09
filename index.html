@@ -2,7 +2,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Awaken: Efficient Full-Duplex Adaptation with Capability Retention</title>
+<title>Awaken Full Duplex — Based on FunAudioChat</title>
 <style>
 :root{
   color-scheme: light;
@@ -192,16 +192,16 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;paddin
 
 <header class="hero">
   <div class="hero-heading">
-    <h1>Awaken Full duplex</h1>
-    <p class="hero-subtitle">Efficient Full-Duplex Adaptation with Capability Retention</p>
+    <h1>Awaken Full Duplex</h1>
+    <p class="hero-subtitle">Based on <a href="https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B">FunAudioChat</a><br>Efficient Full-Duplex Adaptation with Capability Retention</p>
     <p class="hero-byline">Yihang Liu, Richard Yucheng He, Tairan Chen, Baodong Cao, Chen Xu <span class="hero-date">· <time datetime="2026-10-30">Oct 30, 2026</time></span></p>
     <div class="hero-links">
-      <a href="https://github.com/avera-labs/AwakenFullDuplex">GitHub</a>
+      <a href="https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat">GitHub</a>
       <a href="https://huggingface.co/openmartdev/awaken-full-duplex">Hugging Face</a>
     </div>
   </div>
   <div class="hero-in">
-    <p class="lede">Full-duplex voice models can listen and speak at the same time, so they can acknowledge, interrupt, and hand over turns the way people do. Teaching this usually depends on natural conversational audio rich in backchannels. That audio is scarce, and without careful curation it can weaken a model’s reasoning and grounding. Awaken adapts half-duplex Fun-Audio-Chat for full-duplex conversation using only a small amount of dialogue data while retaining most of the base model’s benchmark performance.</p>
+    <p class="lede">Full-duplex voice models can listen and speak at the same time, so they can acknowledge, interrupt, and hand over turns the way people do. Teaching this usually depends on natural conversational audio rich in backchannels. That audio is scarce, and without careful curation it can weaken a model’s reasoning and grounding. <strong>Awaken is based on <a href="https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B">FunAudioChat</a></strong>, adapting the half-duplex model for full-duplex conversation using only a small amount of dialogue data while retaining most of the base model’s benchmark performance.</p>
     <div class="stats">
       <div class="stat"><b class="acc">63%</b><span>backchannel pass rate <em>(SFT alone: 1%)</em></span></div>
       <div class="stat"><b>3%</b><span>floor-take rate while the user is speaking</span></div>
@@ -544,7 +544,7 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;paddin
 <section id="references">
 <div class="kicker"><i>09</i>Resources</div>
 <h2>References</h2>
-<div class="resources"><a href="https://github.com/avera-labs/AwakenFullDuplex">Code · GitHub</a><a href="https://huggingface.co/openmartdev/awaken-full-duplex">Model · Hugging Face</a><a href="https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B">Base model · Fun-Audio-Chat-8B</a></div>
+<div class="resources"><a href="https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat">Code · GitHub</a><a href="https://huggingface.co/openmartdev/awaken-full-duplex">Model · Hugging Face</a><a href="https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B">Base model · Fun-Audio-Chat-8B</a></div>
 <ol class="refs">
   <li><a href="https://arxiv.org/abs/2512.20156">Fun-Audio-Chat Technical Report.</a> arXiv:2512.20156, 2025.</li>
   <li><a href="https://arxiv.org/abs/2505.17589">CosyVoice 3: Towards In-the-wild Speech Generation via Scaling-up and Post-training.</a> arXiv:2505.17589, 2025.</li>
@@ -570,19 +570,19 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;paddin
   title        = {Awaken: Efficient Full-Duplex Adaptation with Capability Retention},
   author       = {Yihang Liu and Richard Yucheng He and Tairan Chen and Baodong Cao and Chen Xu},
   year         = {2026},
-  howpublished = {\url{https://github.com/avera-labs/AwakenFullDuplex}}
+  howpublished = {\url{https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat}}
 }</pre>
 </section>
 
 <section id="license">
 <h2>License</h2>
-<p>Awaken’s code and model weights are released under the <a href="https://github.com/avera-labs/AwakenFullDuplex/blob/main/LICENSE">Apache License 2.0</a>, the same license as the base model <a href="https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B">Fun-Audio-Chat-8B</a>. Awaken builds on <a href="https://github.com/FunAudioLLM/Fun-Audio-Chat">Fun-Audio-Chat</a> and <a href="https://github.com/FunAudioLLM/CosyVoice">CosyVoice</a> (Apache 2.0) and the <a href="https://github.com/QwenLM/Qwen3">Qwen3</a> text backbone (Apache 2.0); its audio encoder follows <a href="https://github.com/openai/whisper">Whisper</a>’s encoder (MIT). See <a href="https://github.com/avera-labs/AwakenFullDuplex/blob/main/NOTICE">NOTICE</a> for details.</p>
+<p>Awaken’s code and model weights are released under the <a href="https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat/blob/main/LICENSE">Apache License 2.0</a>, the same license as the base model <a href="https://huggingface.co/FunAudioLLM/Fun-Audio-Chat-8B">Fun-Audio-Chat-8B</a>. Awaken builds on <a href="https://github.com/FunAudioLLM/Fun-Audio-Chat">Fun-Audio-Chat</a> and <a href="https://github.com/FunAudioLLM/CosyVoice">CosyVoice</a> (Apache 2.0) and the <a href="https://github.com/QwenLM/Qwen3">Qwen3</a> text backbone (Apache 2.0); its audio encoder follows <a href="https://github.com/openai/whisper">Whisper</a>’s encoder (MIT). See <a href="https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat/blob/main/NOTICE">NOTICE</a> for details.</p>
 </section>
 
 </main>
 </div>
 
-<footer>Awaken · <a href="https://github.com/avera-labs/AwakenFullDuplex">Code</a> · <a href="https://huggingface.co/openmartdev/awaken-full-duplex">Model</a> · Built on <a href="https://qwenaudio.github.io/funaudiochat/">Fun-Audio-Chat</a> · Apache 2.0</footer>
+<footer>Awaken · <a href="https://github.com/avera-labs/AwakenFullDuplex-FunAudioChat">Code</a> · <a href="https://huggingface.co/openmartdev/awaken-full-duplex">Model</a> · Built on <a href="https://qwenaudio.github.io/funaudiochat/">Fun-Audio-Chat</a> · Apache 2.0</footer>
 <div id="tip"></div>
 
 <script>
